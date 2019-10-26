@@ -28,13 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnDspTask = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnDspTask
+            // 
+            this.btnDspTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDspTask.Location = new System.Drawing.Point(12, 12);
+            this.btnDspTask.Name = "btnDspTask";
+            this.btnDspTask.Size = new System.Drawing.Size(121, 81);
+            this.btnDspTask.TabIndex = 0;
+            this.btnDspTask.Text = "View work order task descriptions.";
+            this.btnDspTask.UseVisualStyleBackColor = true;
+            this.btnDspTask.Click += new System.EventHandler(this.btnDspTask_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(688, 106);
+            this.Controls.Add(this.btnDspTask);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnDspTask;
     }
 }
 
