@@ -29,6 +29,7 @@ namespace CSharpAdvFinal
         public DspWorkOrderTask()
         {
             InitializeComponent();
+            AddARecord();
         }
 
         private void btnGetTask_Click(object sender, EventArgs e)
@@ -65,6 +66,11 @@ namespace CSharpAdvFinal
         private void txtWorkOrder_TextChanged(object sender, EventArgs e)
         {
             btnGetTask.Enabled = (txtWorkOrder.TextLength > 0); 
+        }
+
+        private void AddARecord()
+        {
+
         }
     }
 }
