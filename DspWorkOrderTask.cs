@@ -29,7 +29,6 @@ namespace CSharpAdvFinal
         public DspWorkOrderTask()
         {
             InitializeComponent();
-            AddARecord();
         }
 
         private void btnGetTask_Click(object sender, EventArgs e)
@@ -68,9 +67,9 @@ namespace CSharpAdvFinal
             btnGetTask.Enabled = (txtWorkOrder.TextLength > 0); 
         }
 
-        private void AddARecord()
+        private void btnAddRecord_Click(object sender, EventArgs e)
         {
-
+            new DWAddARecord().ShowDialog();
         }
     }
 }

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IBM.Data.DB2.iSeries">
-      <HintPath>..\..\OneDrive\IBM.Data.DB2.iSeries.dll</HintPath>
+      <HintPath>.\IBM.Data.DB2.iSeries.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +60,12 @@
     <Compile Include="DspWorkOrderTask.Designer.cs">
       <DependentUpon>DspWorkOrderTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="DWAddARecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DWAddARecord.Designer.cs">
+      <DependentUpon>DWAddARecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DspWorkOrderTask.resx">
       <DependentUpon>DspWorkOrderTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DWAddARecord.resx">
+      <DependentUpon>DWAddARecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
