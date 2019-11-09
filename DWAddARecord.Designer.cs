@@ -76,6 +76,7 @@
             // 
             // cbxPlaneNo
             // 
+            this.cbxPlaneNo.CausesValidation = false;
             this.cbxPlaneNo.DataSource = this.aIRPLANEBindingSource;
             this.cbxPlaneNo.DisplayMember = "PLANENO";
             this.cbxPlaneNo.FormattingEnabled = true;
@@ -83,7 +84,7 @@
             this.cbxPlaneNo.Name = "cbxPlaneNo";
             this.cbxPlaneNo.Size = new System.Drawing.Size(121, 21);
             this.cbxPlaneNo.TabIndex = 2;
-            this.cbxPlaneNo.SelectedValueChanged += new System.EventHandler(this.cbxPlaneNo_SelectedValueChanged);
+            this.cbxPlaneNo.SelectionChangeCommitted += new System.EventHandler(this.cbxPlaneNo_SelectionChangeCommitted);
             // 
             // aIRPLANEBindingSource
             // 
@@ -120,8 +121,6 @@
             // cbxTaskID
             // 
             this.cbxTaskID.CausesValidation = false;
-            this.cbxTaskID.DataSource = this.tASKSBindingSource;
-            this.cbxTaskID.DisplayMember = "TASKID";
             this.cbxTaskID.FormattingEnabled = true;
             this.cbxTaskID.Location = new System.Drawing.Point(122, 59);
             this.cbxTaskID.Name = "cbxTaskID";
@@ -234,6 +233,7 @@
             // 
             // btnInsert
             // 
+            this.btnInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnInsert.Location = new System.Drawing.Point(79, 232);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(102, 38);
@@ -281,7 +281,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtWrkOrdID;
-        private System.Windows.Forms.ComboBox cbxPlaneNo;
         private System.Windows.Forms.Label label2;
         private DeathstarDataSet deathstarDataSet;
         private System.Windows.Forms.BindingSource aIRPLANEBindingSource;
@@ -301,5 +300,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.ComboBox cbxPlaneNo;
     }
 }

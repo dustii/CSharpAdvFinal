@@ -30,11 +30,14 @@ namespace CSharpAdvFinal
         {
         }
 
-        private void cbxPlaneNo_SelectedValueChanged(object sender, EventArgs e)
+        private void cbxPlaneNo_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            cbxTaskID.Items.Clear();
             string planeNo = cbxPlaneNo.SelectedValue.ToString();
-            deathstarDataSet.AIRPLANE.Select("planeNo = @planeNo");
-                
+            cbxTaskID.Items.AddRange(new object[]
+            {
+
+            });
         }
     }
 }
