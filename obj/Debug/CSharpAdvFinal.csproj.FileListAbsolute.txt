@@ -12,3 +12,6 @@ D:\Users\1366296\Desktop\CSharpAdvFinal-master\CSharpAdvFinal-master\obj\Debug\C
 D:\Users\1366296\Desktop\CSharpAdvFinal-master\CSharpAdvFinal-master\obj\Debug\CSharpAdvFinal.csproj.CopyComplete
 D:\Users\1366296\Desktop\CSharpAdvFinal-master\CSharpAdvFinal-master\obj\Debug\CSharpAdvFinal.exe
 D:\Users\1366296\Desktop\CSharpAdvFinal-master\CSharpAdvFinal-master\obj\Debug\CSharpAdvFinal.pdb
+D:\Users\1366296\Desktop\CSharpAdvFinal-master (7)\CSharpAdvFinal-master\obj\Debug\CSharpAdvFinal.csprojAssemblyReference.cache
+D:\Users\1366296\Desktop\CSharpAdvFinal-master (7)\CSharpAdvFinal-master\obj\Debug\CSharpAdvFinal.exe
+D:\Users\1366296\Desktop\CSharpAdvFinal-master (7)\CSharpAdvFinal-master\obj\Debug\CSharpAdvFinal.pdb
