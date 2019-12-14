@@ -12,8 +12,8 @@ using IBM.Data.DB2.iSeries;
 
 /*************************************************************************
  * IBM .NET Enterprise Final Project 
- * Author: Dustin Webber
- * Date: October 26th, 2019
+ * Author: Truman Smith
+ * Date: November 1st, 2019
  * 
  * Form for user to view a work order id's task description.
  *************************************************************************/
@@ -22,16 +22,11 @@ namespace CSharpAdvFinal
 {
     public partial class MaintenanceLogs : Form
     {
-        iDB2Connection connection;
-        iDB2Command command;
-        iDB2DataReader reader;
+        //iDB2Connection connection;
+       // iDB2Command command;
+       // iDB2DataReader reader;
 
-        public MaintenanceLogs()
-        {
-            InitializeComponent();
-        }
-
-        private void btnGetTask_Click(object sender, EventArgs e)
+        private void btnGetmtnLog_Click(object sender, EventArgs e)
         {
             try
             {
@@ -62,12 +57,12 @@ namespace CSharpAdvFinal
         }
 
         // Button disabled if textbox is empty
-        private void txtWorkOrder_TextChanged(object sender, EventArgs e)
+        private void txtMtnLog_TextChanged(object sender, EventArgs e)
         {
-            btnGetTask.Enabled = (txtWorkOrder.TextLength > 0); 
+            btnGetTask.Enabled = (txtMtnLog.TextLength > 0);
         }
 
-        private void DspWorkOrderTask_Load(object sender, EventArgs e)
+        private void DspWorkMtnLog_Load(object sender, EventArgs e)
         {
 
         }
