@@ -20,13 +20,13 @@ using IBM.Data.DB2.iSeries;
 
 namespace CSharpAdvFinal
 {
-    public partial class MaintenanceLogs : Form
+    public partial class DspWorkOrderTask : Form
     {
         iDB2Connection connection;
         iDB2Command command;
         iDB2DataReader reader;
 
-        public MaintenanceLogs()
+        public DspWorkOrderTask()
         {
             InitializeComponent();
         }
@@ -47,17 +47,17 @@ namespace CSharpAdvFinal
 
                 if (reader.Read())
                 {
-                    txtMtnLog.Text = reader.GetString(0);
+                    txtTask.Text = reader.GetString(0);
                 }
                 else
                 {
-                    txtMtnLog.Text = "No results found for specified work order id.";
+                    txtTask.Text = "No results found for specified work order id.";
                 }
 
                 reader.Close();
 
             }
-            catch (Exception ex) { txtMtnLog.Text = ex.Message; }
+            catch (Exception ex) { txtTask.Text = ex.Message; }
 
         }
 
@@ -67,9 +67,9 @@ namespace CSharpAdvFinal
             btnGetTask.Enabled = (txtWorkOrder.TextLength > 0); 
         }
 
-        private void DspWorkOrderTask_Load(object sender, EventArgs e)
+        private void btnAddRecord_Click(object sender, EventArgs e)
         {
-
+            new DWAddARecord().ShowDialog();
         }
     }
 }

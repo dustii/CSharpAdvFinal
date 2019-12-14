@@ -49,14 +49,13 @@
             this.numCost = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.numHours = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.labelResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.aIRPLANEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deathstarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tASKSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +76,6 @@
             // 
             // cbxPlaneNo
             // 
-            this.cbxPlaneNo.CausesValidation = false;
             this.cbxPlaneNo.DataSource = this.aIRPLANEBindingSource;
             this.cbxPlaneNo.DisplayMember = "PLANENO";
             this.cbxPlaneNo.FormattingEnabled = true;
@@ -85,6 +83,7 @@
             this.cbxPlaneNo.Name = "cbxPlaneNo";
             this.cbxPlaneNo.Size = new System.Drawing.Size(121, 21);
             this.cbxPlaneNo.TabIndex = 2;
+            this.cbxPlaneNo.SelectedValueChanged += new System.EventHandler(this.cbxPlaneNo_SelectedValueChanged);
             // 
             // aIRPLANEBindingSource
             // 
@@ -140,25 +139,20 @@
             // 
             // dteStart
             // 
-            this.dteStart.CustomFormat = "MM/dd/yy";
-            this.dteStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dteStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dteStart.Location = new System.Drawing.Point(122, 87);
             this.dteStart.Name = "dteStart";
             this.dteStart.Size = new System.Drawing.Size(121, 20);
             this.dteStart.TabIndex = 6;
-            this.dteStart.Value = new System.DateTime(2019, 11, 16, 15, 41, 10, 0);
             // 
             // dteEnd
             // 
-            this.dteEnd.Checked = false;
-            this.dteEnd.CustomFormat = "MM/dd/yy";
-            this.dteEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dteEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dteEnd.Location = new System.Drawing.Point(122, 113);
             this.dteEnd.Name = "dteEnd";
             this.dteEnd.ShowCheckBox = true;
             this.dteEnd.Size = new System.Drawing.Size(121, 20);
             this.dteEnd.TabIndex = 7;
-            this.dteEnd.Value = new System.DateTime(2019, 11, 16, 15, 39, 47, 0);
             // 
             // label4
             // 
@@ -225,22 +219,21 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Labor Hours:";
             // 
-            // numHours
+            // numericUpDown1
             // 
-            this.numHours.DecimalPlaces = 2;
-            this.numHours.Location = new System.Drawing.Point(122, 194);
-            this.numHours.Maximum = new decimal(new int[] {
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Location = new System.Drawing.Point(122, 194);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numHours.Name = "numHours";
-            this.numHours.Size = new System.Drawing.Size(120, 20);
-            this.numHours.TabIndex = 14;
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 14;
             // 
             // btnInsert
             // 
-            this.btnInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnInsert.Location = new System.Drawing.Point(79, 232);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(102, 38);
@@ -249,25 +242,14 @@
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // labelResult
-            // 
-            this.labelResult.Location = new System.Drawing.Point(5, 280);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(245, 23);
-            this.labelResult.TabIndex = 17;
-            this.labelResult.Text = "result";
-            this.labelResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelResult.Visible = false;
-            // 
             // DWAddARecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 312);
-            this.Controls.Add(this.labelResult);
+            this.ClientSize = new System.Drawing.Size(255, 282);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.numHours);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.numCost);
             this.Controls.Add(this.label6);
@@ -289,7 +271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deathstarDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tASKSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +281,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtWrkOrdID;
+        private System.Windows.Forms.ComboBox cbxPlaneNo;
         private System.Windows.Forms.Label label2;
         private DeathstarDataSet deathstarDataSet;
         private System.Windows.Forms.BindingSource aIRPLANEBindingSource;
@@ -316,9 +299,7 @@
         private System.Windows.Forms.NumericUpDown numCost;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numHours;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.ComboBox cbxPlaneNo;
-        private System.Windows.Forms.Label labelResult;
     }
 }

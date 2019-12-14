@@ -19,7 +19,13 @@ namespace CSharpAdvFinal
 
         private void btnDspTask_Click(object sender, EventArgs e)
         {
-            new MaintenanceLogs().ShowDialog();
+            new DspWorkOrderTask().ShowDialog();
+        }
+
+        private void btnPlaneDesc_Click(object sender, EventArgs e)
+        {
+            
+            new DspPlanes().ShowDialog();
         }
     }
 }

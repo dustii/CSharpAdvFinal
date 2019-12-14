@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnDspTask = new System.Windows.Forms.Button();
+            this.btnPlaneDesc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDspTask
@@ -42,11 +43,23 @@
             this.btnDspTask.UseVisualStyleBackColor = true;
             this.btnDspTask.Click += new System.EventHandler(this.btnDspTask_Click);
             // 
+            // btnPlaneDesc
+            // 
+            this.btnPlaneDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaneDesc.Location = new System.Drawing.Point(157, 13);
+            this.btnPlaneDesc.Name = "btnPlaneDesc";
+            this.btnPlaneDesc.Size = new System.Drawing.Size(121, 81);
+            this.btnPlaneDesc.TabIndex = 1;
+            this.btnPlaneDesc.Text = "View Plane Description";
+            this.btnPlaneDesc.UseVisualStyleBackColor = true;
+            this.btnPlaneDesc.Click += new System.EventHandler(this.btnPlaneDesc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 106);
+            this.Controls.Add(this.btnPlaneDesc);
             this.Controls.Add(this.btnDspTask);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -57,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnDspTask;
+        private System.Windows.Forms.Button btnPlaneDesc;
     }
 }
 
